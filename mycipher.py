@@ -46,3 +46,7 @@ value = ''.join(encoded_text)
 return format_output(value)
 
 args = sys.argv
+
+for line in sys.stdin:
+    result = encryption(line.strip(), int(args[1]))
+    sys.stdout.write(result)
